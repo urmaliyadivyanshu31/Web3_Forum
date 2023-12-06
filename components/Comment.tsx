@@ -3,13 +3,13 @@ import { Text, Heading, HStack, Stack } from "@chakra-ui/react";
 import TimeAgo from "react-timeago";
 import Avatar from "@davatar/react";
 import Username from "./Username";
-import { Comment } from "../hooks/useCommentsContract";
+import { Comment as CommentType } from "../hooks/useCommentsContract";
 
 interface CommentProps {
-  comment: Comment;
+  comment: CommentType;
 }
 
-const Comment: React.FunctionComponent<CommentProps> = ({ comment }) => {
+const CommentComponent: React.FunctionComponent<CommentProps> = ({ comment }) => {
   return (
     <HStack spacing={3} alignItems="start">
       <Avatar size={48} address={comment.creator_address} />
@@ -28,4 +28,4 @@ const Comment: React.FunctionComponent<CommentProps> = ({ comment }) => {
   );
 };
 
-export default Comment;
+export default CommentComponent;
